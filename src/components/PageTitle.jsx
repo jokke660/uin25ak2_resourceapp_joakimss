@@ -1,7 +1,23 @@
-import React, { useState } from "react";
-import Nav from "./Nav";
-import Resources from "./Resources";
+import React from "react";
 
-export default function PageTitle() {
-    
+export default function PageTitle({ resources }) {
+    return (
+        <div>
+            {resources.map((resource, index) => (
+                <div key={index}>
+                    <h3>{resource.category}</h3>
+                    <p>{resource.text}</p>
+                    <ul>
+                        {resource.sources.map((source, sourceIndex) => (
+                            <li key={sourceIndex}>
+                                <a href={source.url} target="_blank">
+                                    {source.title}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
+        </div>
+    );
 }

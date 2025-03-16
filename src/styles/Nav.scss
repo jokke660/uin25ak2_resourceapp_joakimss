@@ -1,18 +1,8 @@
-#root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    --blue: #2A324B;
-    --purple: #58699D;
-    --grey: #E1E5EE;
-    --white: #fff;
-  
-  }
-
 ul {
     display:flex;
     padding: 0;
     margin:0;
+    background-color: #fff;
 }
 
 #categoryList {

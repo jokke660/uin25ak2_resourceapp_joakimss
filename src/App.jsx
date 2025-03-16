@@ -1,17 +1,11 @@
-import './App.css'
-import Layout from './components/Layout'
-import Nav from './components/Nav'
-import PageTitle from './components/PageTitle'
-import Resources from './components/Resources'
+import React, { useState } from "react";
+import "./App.scss";
+import Layout from "./components/Layout";
 
-function App() {
+export default function App() {
   return (
-    <>
-      <Nav/>
-      <PageTitle/>
+    <div>
       <Layout/>
-    </>
+    </div>
   )
 }
-
-export default App

@@ -1,13 +1,19 @@
 import "../styles/Nav.scss";
 
-export default function Nav(){
+export default function Nav({ onCategorySelect }) {
+    const categories = ["HTML", "CSS", "JavaScript", "React", "Sanity and headless CMS"];
+
     return (
         <ul id="categoryList">
-            <li className="navlist">HTML</li>
-            <li className="navlist">CSS</li>
-            <li className="navlist">JavaScript</li>
-            <li className="navlist">React</li>
-            <li className="navlist">Sanity and headless CMS</li>
+            {categories.map((category, index) => (
+                <li
+                    key={index}
+                    className="navlist"
+                    onClick={() => onCategorySelect(category)}
+                >
+                    {category}
+                </li>
+            ))}
         </ul>
-    )
+    );
 }
