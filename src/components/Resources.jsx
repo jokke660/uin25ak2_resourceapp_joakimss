@@ -1,5 +1,3 @@
-import PageTitle from "./PageTitle";
-
      export const resources = [
         {
             category: "HTML",
@@ -96,3 +94,4 @@ import PageTitle from "./PageTitle";
             ]                       
         },
     ];
+    

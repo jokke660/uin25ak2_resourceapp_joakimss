@@ -1,26 +1,16 @@
 import "../styles/Layout.scss";
-import React, { useState } from "react";
+import React from "react";
+import { Outlet } from "react-router-dom"; //importerer outlet fra routing
 import Nav from "./Nav";
-import PageTitle from "./PageTitle";
-import { resources } from "./Resources";
 
 export default function Layout() {
-    const [selectedCategory, setSelectedCategory] = useState(null);
-
-    // finn ressursen som matcher valgt kategori
-    const selectedResource = resources.find(
-        (resource) => resource.category === selectedCategory
-    );
-
-    return (
-        <div id="contentbackground">
-            <Nav onCategorySelect={setSelectedCategory} />
-            
-            {selectedResource ? (
-                <PageTitle resources={[selectedResource]} />
-            ) : (
-                <h2>Velg en kategori.</h2>
-            )}
-        </div>
-    );
+  return (
+    <div id="contentbackground">
+      <Nav />
+      <h2>Velg en kategori</h2>
+      <div id="mainContent">
+        <Outlet />
+      </div>
+    </div>
+  );
 }

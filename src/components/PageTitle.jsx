@@ -10,7 +10,7 @@ export default function PageTitle({ resources }) {
                     <ul>
                         {resource.sources.map((source, sourceIndex) => (
                             <li key={sourceIndex}>
-                                <a href={source.url} target="_blank">
+                                <a href={source.url}>
                                     {source.title}
                                 </a>
                             </li>

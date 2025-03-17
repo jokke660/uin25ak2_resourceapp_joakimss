@@ -1,18 +1,17 @@
 ul {
-    display:flex;
+    display:block;
     padding: 0;
     margin:0;
-    background-color: #fff;
+    background-color: var(--white);
+    color:black;
+
 }
 
 #categoryList {
     display:flex;
-    justify-content: space-between;
+    background-color: var(--grey);
     list-style-type:none;
-}
 
-:hover li {
-    cursor: pointer;
 }
 
 .navlist {
@@ -22,4 +21,22 @@ ul {
     margin-right: 10px;
     font-weight:bold;
     font-size: 25px;
+    text-decoration:none;
 }
+
+.navlist:hover{
+    background-color: var(--white);
+    cursor: pointer;
+
+}
+
+.navlist a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navlist a.aktiv { /*Her kan jeg sette properties for det aktive listeelementet*/
+    background-color: var(--white);
+    color: black;
+  }
