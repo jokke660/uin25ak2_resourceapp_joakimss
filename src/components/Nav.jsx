@@ -1,26 +1,27 @@
-import { NavLink } from "react-router-dom"; //importerer navlink 
+import { NavLink } from "react-router-dom"; //importerer NavLink
 import "../styles/Nav.scss";
 
 export default function Nav() {
   const categories = [
-    { name: "HTML", path: "/html" },
-    { name: "CSS", path: "/css" },
-    { name: "JavaScript", path: "/javascript" },
-    { name: "React", path: "/react" },
-    { name: "Sanity and headless CMS", path: "/sanity" },
-  ];
+    { name: "HTML", path: "/html"},
+    { name: "CSS", path: "/css"},
+    { name: "JavaScript", path: "/javascript"},
+    { name: "React", path: "/react"},
+    { name: "Sanity and headless CMS", path: "/sanity"},
+  ]; //navigasjon, liste-elementer ^ 
 
   return (
     <ul id="categoryList">
       {categories.map((category, index) => (
-        <li key={index} className="navlist">
-          <NavLink
-            to={category.path}
-            className={({ isActive }) => (isActive ? "aktiv" : "")} //.aktiv kan nå brukes for å modifisere listeelementet som er "aktivt"
-          >
+        <NavLink
+          key={index}
+          to={category.path}
+          className={({ isActive }) => `navlist ${isActive ? "aktiv" : ""}`} //.aktiv kan nå brukes for å modifisere listeelementenes utseende når de er "aktiv"
+        >
+          <li>
             {category.name}
-          </NavLink>
-        </li>
+          </li>
+        </NavLink>
       ))}
     </ul>
   );

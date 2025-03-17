@@ -1,4 +1,3 @@
-import React from "react";
 import "./App.scss"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
@@ -18,11 +17,11 @@ export default function App() { //funksjon for å sende riktig ressurs til PageT
     <Router>
       <Routes>
           <Route path="/" element={<Layout />}>
-          <Route path="/html" element={<ResourceWrapper category={"HTML"} />} />
-          <Route path="/css" element={<ResourceWrapper category={"CSS"} />} />
-          <Route path="/javascript" element={<ResourceWrapper category={"JavaScript"} />} />
-          <Route path="/react" element={<ResourceWrapper category={"React"} />} />
-          <Route path="/sanity" element={<ResourceWrapper category={"Sanity and headless CMS"} />} />
+          <Route path="/html" element={<ResourceWrapper category={"HTML"}/>} />
+          <Route path="/css" element={<ResourceWrapper category={"CSS"}/>} />
+          <Route path="/javascript" element={<ResourceWrapper category={"JavaScript"}/>} />
+          <Route path="/react" element={<ResourceWrapper category={"React"}/>} />
+          <Route path="/sanity" element={<ResourceWrapper category={"Sanity and headless CMS"}/>} />
         </Route>
       </Routes>
     </Router>
